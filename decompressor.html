@@ -42,46 +42,33 @@
 			    </div>
 			    <div class="collapse navbar-collapse" id="myNavbar">
 			      <ul class="nav navbar-nav">
-			        <li><a href="index.php">Compressor</a></li> 
-			        <li class="active"><a href="decompressor.php">Decompressor</a></li>
-			        <li><a href="guide.php">Guide</a></li>
+			        <li><a href="./index.html">Compressor</a></li> 
+			        <li class="active"><a href="./decompressor.html">Decompressor</a></li>
+			        <li><a href="./guide.html">Guide</a></li>
 			      </ul>
 			      <ul class="nav navbar-nav navbar-right">
-			        <?php if(isset($_SESSION['fname'])){ ?>
-			      	<li><a href="./index.php"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['fname']; ?></a></li>
-			      	<?php
-			      	}else{
-			      	?>
+			        
 			        <li><a href="./registration.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-			    <?php } ?>
-			    <?php if(isset($_SESSION['fname'])){ ?>
-			    	<li><a href="index.php?logout='1'"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-			    	<?php
-			      	}else{
-			      	?>
+			    
 			        <li><a href="./login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-			    <?php } ?>
+			    
 			      </ul>
 			    </div>
 			  </div>
 		</nav>
 		<div class="container">
-			<?php if(isset($_SESSION['fname'])){ ?>
-			<br />
-				<h1 align="center">Welcome To User <?php echo $_SESSION["fname"]; ?> </h1>
-				<hr>
-			<?php } ?>
+			
 			<h1 align="center">Decompress a Xml File</h1>
 			<br />
 			<div class="panel panel-default">
 				<div class="panel-heading"><b>Decompress to get original XML quality file</b></div>
 				<div class="panel-body">
-					<form id="uploadImage" action="decom.php" method="post" enctype="multipart/form-data">
+					<form id="uploadImage" action="./decom.php" method="post" enctype="multipart/form-data">
 						<div class="form-group">
 							<label>File Upload</label>
 							<div class="dropzone-wrapper">
 				              <div class="dropzone-desc">
-				                <img  class="im" src="/progress/css/icons8-upload-to-cloud-50.png">
+				                <img  class="im" src="/css/icons8-upload-to-cloud-50.png">
 				                <p>Choose an XML file or drag it here.</p>
 				                
 				              </div>
@@ -100,7 +87,7 @@
 						</div>
 						<div id="targetLayer" style="display:none;"></div>
 					</form>
-					<div id="loader-icon" style="display:none; width: 10px;"><img src="loader.gif" /></div>
+					<div id="loader-icon" style="display:none; width: 10px;"><img src="/loader.gif" /></div>
 				</div>
 			</div>
 		</div>
