@@ -3,7 +3,7 @@ $file='';
 if (isset($_REQUEST["file"])) {
  
 $file = urldecode($_REQUEST["file"]);
-        rename("Decompresed Output.Xml",$file);  
+        rename("DecompresedOutput.Xml",$file);  
     //if(preg_match("/^[^.][-a-z0-9_.]+[a-z]$/i", $file)){
         $filepath=$file;
 
