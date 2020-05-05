@@ -11,7 +11,7 @@ if(!empty($_FILES))
 		$target_path = 'dupload/' . $_FILES['uploadFile']['name'];
 		if(move_uploaded_file($source_path, $target_path))
 		{
-			$hello =	shell_exec("python C:/xampp/htdocs/progress/decompressornew.py $target_path");
+			$hello =	shell_exec("python progress/decompressornew.py $target_path");
 		
 			echo "<table width='20%' class='table table-hover' >";
 			echo "<tr>";
